@@ -4,7 +4,10 @@
   :description "Some tools I've collected, and found useful"
   :author "Ryan Gannon <ryanmgannon@gmail.com>"
   :license  "MIT"
-  :version "0.1.0"
+  :version "0.2.0"
   :serial t
+  :depends-on ("jsown")
   :components ((:file "package")
-               (:file "utils")))
+               (:file "file")
+               (:file "utils")
+               (:file "json")))
