@@ -9,7 +9,8 @@
     :flatten
     :fact
     :choose
-    :while))
+    :while
+    :open-browser))
 
 (defpackage #:utils.file
   (:use #:cl)
@@ -48,3 +49,9 @@
    :*parsed-null-value*
    :*parsed-empty-list-value*
    :with-injective-reader))
+
+
+(defpackage #:utils.os
+  (:use #:cl)
+  (:export
+   :open-browser))

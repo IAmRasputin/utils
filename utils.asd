@@ -6,8 +6,9 @@
   :license  "MIT"
   :version "0.2.0"
   :serial t
-  :depends-on ("jsown")
+  :depends-on ("jsown" "bordeaux-threads")
   :components ((:file "package")
                (:file "file")
                (:file "utils")
-               (:file "json")))
+               (:file "json")
+               (:file "os")))
