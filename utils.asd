@@ -6,7 +6,7 @@
   :license  "MIT"
   :version "0.2.0"
   :serial t
-  :depends-on ("jsown")
+  :depends-on ("jsown" "cl-interpol")
   :components ((:file "package")
                (:file "file")
                (:file "utils")
