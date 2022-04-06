@@ -1,10 +1,14 @@
 # utils
 
-Some utility functions, so I don't have to keep rewriting them.
+Some Common Lisp utility functions, so I don't have to keep rewriting them.
+
+These have been built slowly over time for my own use cases, but if someone
+insits that they'd be useful for someone else, I'd be happy to share them in a
+more portable way.
 
 ## License
 
-Copyright (c) 2020 Ryan Gannon
+Copyright (c) 2022 Ryan Gannon
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
