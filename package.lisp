@@ -9,8 +9,7 @@
     :flatten
     :fact
     :choose
-    :while
-    :open-browser))
+    :while))
 
 (defpackage #:utils.file
   (:use #:cl)
