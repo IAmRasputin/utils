@@ -35,9 +35,10 @@
       (* x (fact (- x 1)))))
 
 (defun choose (n r)
-  (/ (fact n)
-     (fact (- n r))
-     (fact r)))
+  (when (>= n r)
+    (/ (fact n)
+       (fact (- n r))
+       (fact r))))
 
 (defmacro while (pred &rest body)
   `(do ()

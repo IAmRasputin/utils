@@ -1,7 +1,7 @@
 ;; For interacting with _other_ programs, including the OS
 (in-package #:utils.os)
 
-(defun open-browser (url)
+(defun run-in-new-thread (shell-command)
   (bt:make-thread (lambda ()
-                    (uiop:run-program (format nil "firefox --new-tab ~a" url)))
-                  :name "firefox (opened by sbcl)"))
+                    (uiop:run-program (format nil "~a" shell-command)))
+                  :name (format nil "~s (opened by sbcl)" shell-command)))

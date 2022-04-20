@@ -53,4 +53,4 @@
 (defpackage #:utils.os
   (:use #:cl)
   (:export
-   :open-browser))
+   :run-in-new-thread))
