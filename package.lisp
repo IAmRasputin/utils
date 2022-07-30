@@ -51,3 +51,9 @@
    :*parsed-null-value*
    :*parsed-empty-list-value*
    :with-injective-reader))
+
+
+(defpackage #:utils.os
+  (:use #:cl)
+  (:export
+   :run-in-new-thread))

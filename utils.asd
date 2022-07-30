@@ -10,4 +10,5 @@
   :components ((:file "package")
                (:file "file")
                (:file "utils")
-               (:file "json")))
+               (:file "json")
+               (:file "os")))
