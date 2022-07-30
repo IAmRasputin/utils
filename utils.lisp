@@ -45,14 +45,8 @@
      ,@body))
 
 
-(defmacro println (formatted-string &optional (output-stream *standard-output*))
-  "Expands to a call to write the string interpolated in the current context"
-  `(progn
-     (write-line (interpolate-string ,formatted-string) ,output-stream)
-     (values)))
-
-(defmacro interpolate-string (formatted-string)
+(defmacro interpolated (string)
   (let ((stream (gensym)))
     `(let ((*read-eval* nil))
-       (with-input-from-string (,stream (mkstr #\" ,formatted-string #\"))
-         (eval (interpol-reader ,stream nil nil :recursive-p nil))))))
+       (with-input-from-string (,stream (mkstr #\" ,string #\"))
+         (interpol-reader ,stream nil nil :recursive-p nil)))))
