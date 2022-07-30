@@ -44,3 +44,10 @@
   `(do ()
        ((not ,pred))
      ,@body))
+
+
+(defmacro interpolated (string)
+  (let ((stream (gensym)))
+    `(let ((*read-eval* nil))
+       (with-input-from-string (,stream (mkstr #\" ,string #\"))
+         (interpol-reader ,stream nil nil :recursive-p nil)))))

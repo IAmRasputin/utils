@@ -2,6 +2,7 @@
 
 (defpackage #:utils
   (:use #:cl)
+  (:import-from :cl-interpol :interpol-reader)
   (:export
     :mkstr
     :symb
@@ -9,7 +10,9 @@
     :flatten
     :fact
     :choose
-    :while))
+    :while
+    :println
+    :interpolate-string))
 
 (defpackage #:utils.file
   (:use #:cl)
